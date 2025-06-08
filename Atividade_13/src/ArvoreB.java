@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -36,7 +37,8 @@ public class ArvoreB {
         raiz.emOrdem(lista);
         lista.sort(Comparator.comparing(l -> l.titulo));
         for (Livro l : lista) {
-            System.out.println(l);
+            JOptionPane.showMessageDialog(null, l.toString());
+
         }
     }
 

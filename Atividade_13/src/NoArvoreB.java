@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.List;
 
 public class NoArvoreB {
@@ -88,12 +89,12 @@ public class NoArvoreB {
     }
 
     public void print(String prefix) {
-        System.out.print(prefix + "[");
+        JOptionPane.showMessageDialog(null, prefix + "[");
         for (int i = 0; i < numChaves; i++) {
-            System.out.print(chaves[i].isbn);
+            JOptionPane.showInputDialog(null, prefix + chaves[i].toString());
             if (i < numChaves - 1) System.out.print(" | ");
         }
-        System.out.println("]");
+        JOptionPane.showMessageDialog(null, prefix + "]");
         if (!folha) {
             for (int i = 0; i <= numChaves; i++) {
                 filhos[i].print(prefix + "  ");

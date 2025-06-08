@@ -24,7 +24,7 @@ public class Main {
                 case 2:
                     String busca = JOptionPane.showInputDialog("Digite ISBN: ");
                     Livro l = arvore.buscar(busca);
-                    System.out.println(l != null ? l : "Livro não encontrado.");
+                    JOptionPane.showMessageDialog(null, l != null ? l.toString() : "Livro não encontrado.");
                     break;
 
                 case 3:
@@ -39,7 +39,7 @@ public class Main {
                     return;
 
                 default:
-                    System.out.println("Opção inválida.");
+                    JOptionPane.showMessageDialog(null, "Opção inválida.");
             }
         }
     }
